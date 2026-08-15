@@ -160,6 +160,14 @@ header {
     justify-content: center;
 }
 
+.hero-image img {
+    display: block;
+    width: min(100%, 430px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
 
 .photo-placeholder {
     width: 380px;
@@ -551,6 +559,10 @@ footer {
 
     .hero-image {
         order: -1;
+    }
+
+    .hero-image img {
+        width: min(100%, 340px);
     }
 
     .photo-placeholder {
