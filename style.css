@@ -158,14 +158,18 @@ header {
 .hero-image {
     display: flex;
     justify-content: center;
+    align-self: start;
+    width: 400px;
+    margin-top: 53px;
+    margin-left: 35px;
 }
 
 .hero-image img {
     display: block;
-    width: min(100%, 430px);
-    aspect-ratio: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    object-position: center 28%;
+    object-position: center;
 }
 
 
@@ -559,10 +563,14 @@ footer {
 
     .hero-image {
         order: -1;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
     }
 
     .hero-image img {
         width: min(100%, 340px);
+        aspect-ratio: 4 / 3;
     }
 
     .photo-placeholder {
