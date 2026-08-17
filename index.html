@@ -242,21 +242,25 @@ Lover of music, food, travel & fashion. ✦
             <article class="project-card">
 
                 <div class="project-image">
-                    BUILD 01
+                    <iframe
+                        src="assets/elan-outfits.pdf#page=1&amp;toolbar=0&amp;navpanes=0"
+                        title="ELAN outfit collection preview"
+                        loading="lazy">
+                    </iframe>
                 </div>
 
                 <div class="project-info">
 
-                    <span>WEBSITE</span>
+                    <span>FASHION PROJECT</span>
 
-                    <h3>Projec</h3>
+                    <h3>ELAN</h3>
 
                     <p>
-                        Describe what you created, why you created it
-                        and what you learned.
+                        A curated outfit collection exploring styling,
+                        presentation, and visual direction.
                     </p>
 
-                    <a href="#">View Project →</a>
+                    <button class="project-link" type="button" data-pdf-open>View Project →</button>
 
                 </div>
 
@@ -286,6 +290,17 @@ Lover of music, food, travel & fashion. ✦
             </article>
 
         </div>
+
+        <dialog class="pdf-dialog" id="elan-pdf-dialog" aria-labelledby="elan-pdf-title">
+            <div class="pdf-dialog-header">
+                <h3 id="elan-pdf-title">ELAN</h3>
+                <button class="pdf-dialog-close" type="button" data-pdf-close aria-label="Close PDF viewer">&times;</button>
+            </div>
+            <iframe
+                data-src="assets/elan-outfits.pdf#toolbar=1&amp;navpanes=0"
+                title="ELAN outfit collection">
+            </iframe>
+        </dialog>
 
     </section>
 
