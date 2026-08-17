@@ -33,8 +33,13 @@ sections.forEach(section => {
 const pdfDialog = document.getElementById("elan-pdf-dialog");
 const pdfFrame = pdfDialog?.querySelector("iframe");
 
-document.querySelector("[data-pdf-open]")?.addEventListener("click", () => {
-    if (!pdfFrame.src) {
+document.querySelector("[data-pdf-open]")?.addEventListener("click", event => {
+    if (!pdfDialog?.showModal || !pdfFrame) {
+        return;
+    }
+
+    event.preventDefault();
+    if (!pdfFrame.getAttribute("src")) {
         pdfFrame.src = pdfFrame.dataset.src;
     }
     pdfDialog.showModal();
