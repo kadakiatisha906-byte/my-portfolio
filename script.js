@@ -30,19 +30,21 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-const pdfDialog = document.getElementById("elan-pdf-dialog");
+const pdfDialog = document.getElementById("project-pdf-dialog");
 const pdfFrame = pdfDialog?.querySelector("iframe");
+const pdfTitle = document.getElementById("project-pdf-title");
 
-document.querySelector("[data-pdf-open]")?.addEventListener("click", event => {
-    if (!pdfDialog?.showModal || !pdfFrame) {
-        return;
-    }
+document.querySelectorAll("[data-pdf-open]").forEach(link => {
+    link.addEventListener("click", event => {
+        if (!pdfDialog?.showModal || !pdfFrame) {
+            return;
+        }
 
-    event.preventDefault();
-    if (!pdfFrame.getAttribute("src")) {
-        pdfFrame.src = pdfFrame.dataset.src;
-    }
-    pdfDialog.showModal();
+        event.preventDefault();
+        pdfTitle.textContent = link.dataset.pdfTitle;
+        pdfFrame.src = link.dataset.pdfSrc;
+        pdfDialog.showModal();
+    });
 });
 
 document.querySelector("[data-pdf-close]")?.addEventListener("click", () => {

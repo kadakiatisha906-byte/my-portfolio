@@ -6,7 +6,7 @@
 
     <title>TISHA KADAKIA | Personal Portfolio</title>
 
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
@@ -241,12 +241,11 @@ Lover of music, food, travel & fashion. ✦
 
             <article class="project-card">
 
-                <div class="project-image">
-                    <iframe
-                        src="assets/elan-outfits.pdf#page=1&amp;toolbar=0&amp;navpanes=0"
-                        title="ELAN outfit collection preview"
+                <div class="project-image project-cover">
+                    <img
+                        src="assets/elan-cover.jpeg"
+                        alt="ELAN Fall Winter Collection 2026 cover"
                         loading="lazy">
-                    </iframe>
                 </div>
 
                 <div class="project-info">
@@ -260,7 +259,12 @@ Lover of music, food, travel & fashion. ✦
                         presentation, and visual direction.
                     </p>
 
-                    <a class="project-link" href="assets/elan-outfits.pdf" data-pdf-open>View Project →</a>
+                    <a
+                        class="project-link"
+                        href="assets/elan-outfits.pdf"
+                        data-pdf-open
+                        data-pdf-src="assets/elan-outfits.pdf#toolbar=1&amp;navpanes=0"
+                        data-pdf-title="ELAN">View Project →</a>
 
                 </div>
 
@@ -269,21 +273,30 @@ Lover of music, food, travel & fashion. ✦
 
             <article class="project-card">
 
-                <div class="project-image">
-                    BUILD 02
+                <div class="project-image project-cover">
+                    <img
+                        src="assets/paper-hearts-cover.jpeg"
+                        alt="Paper Hearts songwriting journal cover"
+                        loading="lazy">
                 </div>
 
                 <div class="project-info">
 
-                    <span>DESIGN</span>
+                    <span>SONGWRITING / EDITORIAL</span>
 
-                    <h3>Project Name</h3>
+                    <h3>Paper Hearts</h3>
 
                     <p>
-                        Add another project or experience here.
+                        A personal songwriting journal bringing together
+                        original songs, their stories, and visual direction.
                     </p>
 
-                    <a href="#">View Project →</a>
+                    <a
+                        class="project-link"
+                        href="assets/paper-hearts.pdf"
+                        data-pdf-open
+                        data-pdf-src="assets/paper-hearts.pdf#toolbar=1&amp;navpanes=0"
+                        data-pdf-title="Paper Hearts">View Project →</a>
 
                 </div>
 
@@ -291,14 +304,13 @@ Lover of music, food, travel & fashion. ✦
 
         </div>
 
-        <dialog class="pdf-dialog" id="elan-pdf-dialog" aria-labelledby="elan-pdf-title">
+        <dialog class="pdf-dialog" id="project-pdf-dialog" aria-labelledby="project-pdf-title">
             <div class="pdf-dialog-header">
-                <h3 id="elan-pdf-title">ELAN</h3>
+                <h3 id="project-pdf-title">Project</h3>
                 <button class="pdf-dialog-close" type="button" data-pdf-close aria-label="Close PDF viewer">&times;</button>
             </div>
             <iframe
-                data-src="assets/elan-outfits.pdf#toolbar=1&amp;navpanes=0"
-                title="ELAN outfit collection">
+                title="Project document viewer">
             </iframe>
         </dialog>
 
@@ -418,7 +430,7 @@ Lover of music, food, travel & fashion. ✦
     </footer>
 
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 
 </body>
 </html>
